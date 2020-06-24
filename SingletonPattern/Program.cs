@@ -8,7 +8,7 @@ namespace SingletonPattern
 {
     public class Singleton
     {
-        private static Singleton instance=null;
+        private static Singleton instance = null;
 
         Singleton()
         {
@@ -18,7 +18,7 @@ namespace SingletonPattern
         {
             get
             {
-                if(instance==null)
+                if (instance == null)
                 {
                     instance = new Singleton();
                 }
@@ -40,9 +40,9 @@ namespace SingletonPattern
         {
             get
             {
-                if(instance==null)
+                if (instance == null)
                 {
-                    lock(padlock)
+                    lock (padlock)
                     {
                         instance = new SingletonThreadVersion();
                     }
@@ -64,11 +64,11 @@ namespace SingletonPattern
         {
             get
             {
-                if(instance==null)
+                if (instance == null)
                 {
-                    lock(padlock)
+                    lock (padlock)
                     {
-                        if(instance==null)
+                        if (instance == null)
                         {
                             instance = new SingletonDoubleLocking();
                         }
@@ -104,11 +104,11 @@ namespace SingletonPattern
         {
             get
             {
-                if(instance==null)
+                if (instance == null)
                 {
-                    lock(padlock)
+                    lock (padlock)
                     {
-                        if(instance==null)
+                        if (instance == null)
                         {
                             instance = new SingletonExample();
                         }
@@ -123,8 +123,9 @@ namespace SingletonPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Latitude + Longitude ="+ SingletonExample.Instance.Calculate());
+            Console.WriteLine("Latitude + Longitude =" + SingletonExample.Instance.Calculate());
             Console.Read();
+
         }
     }
 }

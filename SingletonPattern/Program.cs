@@ -123,9 +123,32 @@ namespace SingletonPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Latitude + Longitude =" + SingletonExample.Instance.Calculate());
-            Console.Read();
+            //Console.WriteLine("Latitude + Longitude =" + SingletonExample.Instance.Calculate());
+            //Console.Read();
 
+            for (int i = 1; i <= 15; i++)
+            {
+                bool fizz = i % 3 == 0;
+                bool buzz = i % 5 == 0;
+
+                if(fizz&&buzz)
+                {
+                    Console.WriteLine("fizzbuzz");
+                }
+                else if(i%3==0)
+                {
+                    Console.WriteLine("fizz");
+                }
+                else if(i%5==0)
+                {
+                    Console.WriteLine("buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            Console.Read();
         }
     }
 }
